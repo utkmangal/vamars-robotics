@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMARS: The Future of Dental Robotics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E1F5FE; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0288D1; 
+            border-radius: 5px;
+        }
+
+        /* Timeline CSS */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #0288D1;
+            z-index: 0;
+        }
+        
+        /* Architecture Flow Arrows */
+        .arrow-down::after {
+            content: "↓";
+            font-size: 2rem;
+            color: #0288D1;
+            display: block;
+            text-align: center;
+        }
+        
+        /* Palette Reference: Vibrant Medical Blues
+           Primary: #0288D1 (Deep Blue)
+           Secondary: #03A9F4 (Light Blue)
+           Accent: #B3E5FC (Pale Blue)
+           Text: #37474F (Blue Grey)
+           Background: #F1F8E9 (Very subtle tint) -> Changed to White/Pale Blue mix
+        */
+    </style>
+    <!-- 
+        NARRATIVE PLAN:
+        1. Title/Hook: Introduce VAMARS as the solution to ergonomic burden.
+        2. The "Why": Clinical Leadership necessity cards.
+        3. The "What": 3-Arm System Architecture diagram.
+        4. The "How": 3-Stage Development Roadmap.
+        5. Deep Dive (Phase I): Specific metrics and charts (Accuracy, Force, Latency).
+        6. Conclusion: Summary of impact.
+        
+        CHART SELECTIONS (NO SVG):
+        1. Positional Accuracy (Bar Chart): Comparison of Robot vs Human vs Tolerance.
+        2. Success Metrics (Radar/Polar Area): Visualizing the multi-faceted success criteria.
+        3. Force Feedback (Doughnut): Safety threshold visualization.
+    -->
+</head>
+<body class="bg-slate-50 text-slate-700 font-sans leading-relaxed">
+
+    <!-- HERO SECTION -->
+    <header class="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-16 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">VAMARS</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 mb-8">Voice-Activated Multi-Arm Robotic System</p>
+            <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 border border-white/30">
+                <span class="text-white font-semibold">Automating the Art of Dental Assistance</span>
+            </div>
+            <p class="mt-8 max-w-3xl mx-auto text-lg text-blue-50">
+                A research proposal to develop an independent robotic assistant capable of light curing, suction, and retraction—enabling true "four-handed dentistry" for the solo practitioner.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-20">
+
+        <!-- SECTION 1: THE NECESSITY -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Why Clinical Leadership is Vital</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Robotics in dentistry isn't just about engineering; it's about understanding biology, safety, and workflow.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4 text-blue-500 text-center">🫀</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Clinical Safety</h3>
+                    <p class="text-sm text-gray-600 text-center">Defining the fine line between productive retraction and tissue trauma. Only a clinician knows the tactile limits of soft tissue.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4 text-cyan-500 text-center">🦷</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Anatomy</h3>
+                    <p class="text-sm text-gray-600 text-center">Handling immense biological variation, from trismus (limited opening) to macroglossia (enlarged tongue).</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4 text-blue-500 text-center">⚡</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Workflow</h3>
+                    <p class="text-sm text-gray-600 text-center">Integrating seamlessly into the "dance" of dentistry without obstructing the primary surgeon's line of sight.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4 text-cyan-500 text-center">⚖️</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Ethics</h3>
+                    <p class="text-sm text-gray-600 text-center">Navigating complex medical-legal standards of care and bioethical frameworks for autonomous assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SYSTEM FUNCTIONS (3 ARMS) -->
+        <section class="bg-blue-50 rounded-2xl p-8 md:p-12">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">The Multi-Arm Architecture</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Three independent 6-DOF robotic arms working in synchronization to maintain a clear and safe operative field.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Arm 1: Suction -->
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center transform transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">💧</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">High-Volume Evacuation</h3>
+                    <p class="text-gray-600 text-sm">Adaptive suction of saliva, blood, and cooling water. Autonomously tracks pooling liquid.</p>
+                </div>
+                <!-- Arm 2: Retraction -->
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center transform transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🛡️</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Soft Tissue Retraction</h3>
+                    <p class="text-gray-600 text-sm">Gentle, force-limited holding of the tongue and cheeks to protect the patient.</p>
+                </div>
+                <!-- Arm 3: Curing -->
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center transform transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🔦</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Light Curing</h3>
+                    <p class="text-gray-600 text-sm">Precise positioning of LED curing units at the optimal angle and distance for resin polymerization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PHASE I METRICS & CHARTS -->
+        <section>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-blue-800 mb-2">Phase I: Simulation & Benchmarks</h2>
+                <p class="text-gray-600">
+                    The initial phase utilizes Typodonts and Mannequins to configure kinematics. The following data points represent the target success metrics required to proceed to clinical trials.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- CHART 1: Positional Accuracy -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Target Positional Accuracy</h3>
+                    <p class="text-xs text-gray-500 mb-4">Comparison of Robot Precision vs. Clinical Tolerance (Goal: Inform/Compare)</p>
+                    <div class="chart-container">
+                        <canvas id="accuracyChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 bg-gray-50 p-3 rounded">
+                        <strong>Insight:</strong> The VAMARS system targets a precision of ±0.5mm, significantly tighter than the general clinical tolerance of 1.0mm, ensuring safe interaction near high-speed drills.
+                    </p>
+                </div>
+
+                <!-- CHART 2: Success Criteria Breakdown -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Key Performance Indicators</h3>
+                    <p class="text-xs text-gray-500 mb-4">Required thresholds for System Validation (Goal: Relationships/Status)</p>
+                    <div class="chart-container">
+                        <canvas id="kpiChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 bg-gray-50 p-3 rounded">
+                        <strong>Insight:</strong> Voice recognition must operate at >95% reliability even in the noisy acoustic environment of a dental operatory (drills/suction).
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: FORCE FEEDBACK SAFETY -->
+        <section class="bg-white p-8 rounded-xl shadow-lg border-l-8 border-orange-400">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Safety First: Force Feedback</h2>
+                    <p class="text-gray-600 mb-4">
+                        One of the most critical aspects of Phase I is calibrating the "soft touch." The robot must differentiate between holding a cheek back and pressing too hard.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-orange-500 mr-2 font-bold">⚠</span>
+                            <span class="text-sm text-gray-600"><strong>Max Force Limit:</strong> 5 Newtons (N)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2 font-bold">ℹ</span>
+                            <span class="text-sm text-gray-600"><strong>Response:</strong> Auto-retract/Freeze upon threshold breach.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">✓</span>
+                            <span class="text-sm text-gray-600"><strong>Sensor:</strong> Wrist-mounted Force-Torque sensors.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-sm font-bold text-center text-gray-500 mb-2">Retraction Force Distribution</h3>
+                    <div class="chart-container" style="height: 250px;">
+                        <canvas id="forceChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-2">Simulated distribution of force events during a procedure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: DEVELOPMENT ROADMAP -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-blue-800">Three-Stage Development Lifecycle</h2>
+                <p class="text-gray-600">From digital twins to real-world patient care.</p>
+            </div>
+
+            <div class="relative py-10 max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="timeline-line hidden md:block"></div>
+
+                <!-- Stage 1 -->
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
+                    <div class="text-right md:pr-10 order-1">
+                        <h3 class="text-xl font-bold text-blue-900">Stage I: Simulation</h3>
+                        <p class="text-blue-600 font-semibold mb-2">Kinematic Configuration</p>
+                        <p class="text-sm text-gray-600">Using typodonts and mannequins to map coordinate systems and collision avoidance algorithms. No human subjects.</p>
+                    </div>
+                    <div class="order-2 flex justify-center md:justify-start md:pl-10">
+                        <div class="w-16 h-16 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center text-xl font-bold text-blue-500 shadow-md">1</div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
+                    <div class="order-2 md:order-1 flex justify-center md:justify-end md:pr-10">
+                        <div class="w-16 h-16 bg-white border-4 border-cyan-500 rounded-full flex items-center justify-center text-xl font-bold text-cyan-500 shadow-md">2</div>
+                    </div>
+                    <div class="order-1 md:order-2 md:pl-10">
+                        <h3 class="text-xl font-bold text-blue-900">Stage II: Human-in-the-Loop</h3>
+                        <p class="text-cyan-600 font-semibold mb-2">Dynamic Adaptation</p>
+                        <p class="text-sm text-gray-600">Integrating computer vision to track patient head movement and filtering drill noise from voice commands.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-right md:pr-10 order-1">
+                        <h3 class="text-xl font-bold text-blue-900">Stage III: Clinical Trials</h3>
+                        <p class="text-blue-600 font-semibold mb-2">Validation</p>
+                        <p class="text-sm text-gray-600">Multi-center trials comparing VAMARS efficiency and safety against traditional human-assisted dentistry.</p>
+                    </div>
+                    <div class="order-2 flex justify-center md:justify-start md:pl-10">
+                        <div class="w-16 h-16 bg-white border-4 border-green-500 rounded-full flex items-center justify-center text-xl font-bold text-green-500 shadow-md">3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-800 text-white py-12 text-center rounded-t-2xl mt-12">
+            <h2 class="text-2xl font-bold mb-4">VAMARS Research Proposal</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Bridging the gap between robotics and clinical reality to empower the solo dental practitioner.
+            </p>
+            <div class="text-sm text-gray-500">
+                <p>Designed for Academic & Clinical Review</p>
+                <p class="mt-2">Generated based on "Robotics_Research_Proposal.md"</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- UTILITY: LABEL WRAPPING FOR CHART.JS ---
+        function splitLabel(label) {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= 16) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- COMMON TOOLTIP CONFIGURATION ---
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: POSITIONAL ACCURACY (Bar Chart) ---
+        const ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
+        const accuracyLabels = ['VAMARS Target', 'Clinical Tolerance', 'Avg Human Assistant'];
+        const accuracyData = [0.5, 1.0, 1.5]; // Data in mm
+
+        new Chart(ctxAccuracy, {
+            type: 'bar',
+            data: {
+                labels: accuracyLabels.map(splitLabel),
+                datasets: [{
+                    label: 'Precision (mm) - Lower is Better',
+                    data: accuracyData,
+                    backgroundColor: [
+                        '#0288D1', // VAMARS (Blue)
+                        '#BDBDBD', // Tolerance (Gray)
+                        '#E0E0E0'  // Human (Light Gray)
+                    ],
+                    borderColor: '#01579B',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Deviation (mm)' }
+                    }
+                },
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- CHART 2: KPIs (Bar/Line Combo style - simplified to Bar for clarity) ---
+        const ctxKPI = document.getElementById('kpiChart').getContext('2d');
+        const kpiLabels = ['Voice Rec. Success', 'Evacuation Efficiency', 'System Uptime', 'Latency < 1.5s'];
+        const kpiData = [95, 90, 99, 100]; // Percentages
+
+        new Chart(ctxKPI, {
+            type: 'bar',
+            data: {
+                labels: kpiLabels.map(splitLabel),
+                datasets: [{
+                    label: 'Target Metrics (%)',
+                    data: kpiData,
+                    backgroundColor: 'rgba(3, 169, 244, 0.7)', // Light Blue
+                    borderColor: '#0288D1',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal Bar for better readability of text
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Performance Percentage (%)' }
+                    }
+                },
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // --- CHART 3: FORCE DISTRIBUTION (Doughnut) ---
+        // Simulating the distribution of force readings. Ideally, most should be in the "Safe" zone.
+        const ctxForce = document.getElementById('forceChart').getContext('2d');
+        const forceLabels = ['Safe (<3N)', 'Warning (3-4.9N)', 'Critical (>5N)'];
+        
+        new Chart(ctxForce, {
+            type: 'doughnut',
+            data: {
+                labels: forceLabels.map(splitLabel),
+                datasets: [{
+                    label: 'Force Sensor Readings',
+                    data: [85, 14, 1], // Simulated distribution
+                    backgroundColor: [
+                        '#4CAF50', // Green (Safe)
+                        '#FF9800', // Orange (Warning)
+                        '#F44336'  // Red (Critical)
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%', // Thin ring
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { position: 'right', labels: { boxWidth: 10 } }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

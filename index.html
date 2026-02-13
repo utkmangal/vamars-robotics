@@ -582,9 +582,7 @@
         }
 
         // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage(currentLang);
-        });
+        // DOMContentLoaded moved to end with chart initialization
 
         // --- UTILITY: LABEL WRAPPING FOR CHART.JS ---    </main>
 
@@ -623,8 +621,10 @@
             }
         };
 
-        // --- CHART 1: POSITIONAL ACCURACY (Bar Chart) ---
-        const ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
+        // Initialize charts after DOM is loaded
+        function initializeCharts() {
+            // --- CHART 1: POSITIONAL ACCURACY (Bar Chart) ---
+            const ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
         const accuracyLabels = ['VAMARS Target', 'Clinical Tolerance', 'Avg Human Assistant'];
         const accuracyData = [0.5, 1.0, 1.5]; // Data in mm
 
@@ -725,6 +725,13 @@
                     legend: { position: 'right', labels: { boxWidth: 10 } }
                 }
             }
+        });
+        }
+
+        // Initialize everything on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage(currentLang);
+            initializeCharts();
         });
 
     </script>

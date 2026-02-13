@@ -201,10 +201,103 @@
             </div>
 
             <div class="mt-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-6 text-white text-center">
-                <p class="text-lg font-semibold mb-2">🎯 Mission Statement</p>
-                <p class="text-sm opacity-90 max-w-3xl mx-auto">
+                <p class="text-lg font-semibold mb-2">🎯 <span data-i18n="mission.title">Mission Statement</span></p>
+                <p class="text-sm opacity-90 max-w-3xl mx-auto" data-i18n="mission.description">
                     VAMARS aims to resolve the fundamental human resource bottleneck in dentistry by providing an intelligent, autonomous robotic assistant that works tirelessly alongside solo practitioners—ensuring that aging populations and underserved communities receive the oral healthcare they deserve.
                 </p>
+            </div>
+        </section>
+
+        <!-- SECTION 0.5: ELDERLY ORAL HEALTHCARE CRISIS -->
+        <section class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4" data-i18n="elderly.title">The Elderly Oral Healthcare Crisis</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-i18n="elderly.subtitle">
+                    Aging populations face unique dental challenges that require innovative solutions
+                </p>
+            </div>
+
+            <!-- Korean Context Highlight -->
+            <div class="bg-gradient-to-br from-red-50 to-blue-50 rounded-2xl p-6 md:p-8 mb-8 border-l-4 border-red-500">
+                <div class="flex items-start gap-4">
+                    <div class="text-4xl">🇰🇷</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="korea.header">South Korea: A Case Study in Demographic Transition</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <div class="text-3xl font-bold text-red-600 mb-1">46.4%</div>
+                                <p class="text-sm text-gray-700 font-semibold" data-i18n="korea.stat1">Population aged 65+ by 2067</p>
+                                <p class="text-xs text-gray-500 mt-1" data-i18n="korea.stat1.detail">Korea has the fastest aging rate among OECD nations</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <div class="text-3xl font-bold text-blue-600 mb-1">25.6%</div>
+                                <p class="text-sm text-gray-700 font-semibold" data-i18n="korea.stat2">Currently aged 65+ (2024)</p>
+                                <p class="text-xs text-gray-500 mt-1" data-i18n="korea.stat2.detail">Already a super-aged society (over 20%)</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 leading-relaxed" data-i18n="korea.description">
+                            South Korea's National Health Insurance data shows that elderly patients (65+) require dental visits 2.3 times more frequently than younger adults. With the collapse of traditional multi-generational household structures, elderly individuals increasingly live alone, making transportation to dental clinics a significant barrier. Rural areas face particularly acute shortages, with some counties having fewer than 5 dentists per 100,000 elderly residents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elderly Oral Health Challenges -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+                    <div class="text-3xl mb-3">🦴</div>
+                    <h4 class="font-bold text-gray-900 mb-2" data-i18n="elderly.challenge1.title">Bone Density Loss</h4>
+                    <p class="text-sm text-gray-700" data-i18n="elderly.challenge1.desc">
+                        Osteoporosis and reduced bone density complicate implant procedures and prosthetic stability, requiring more frequent adjustments and specialized care protocols.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                    <div class="text-3xl mb-3">💊</div>
+                    <h4 class="font-bold text-gray-900 mb-2" data-i18n="elderly.challenge2.title">Polypharmacy Effects</h4>
+                    <p class="text-sm text-gray-700" data-i18n="elderly.challenge2.desc">
+                        Multiple medications cause xerostomia (dry mouth), increasing cavity risk by 300%. Anticoagulants complicate surgical procedures and emergency interventions.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200">
+                    <div class="text-3xl mb-3">♿</div>
+                    <h4 class="font-bold text-gray-900 mb-2" data-i18n="elderly.challenge3.title">Mobility Limitations</h4>
+                    <p class="text-sm text-gray-700" data-i18n="elderly.challenge3.desc">
+                        Stroke survivors, Parkinson's patients, and those with arthritis struggle with manual dexterity for oral hygiene and transportation to dental facilities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Why VAMARS Matters for Elderly Care -->
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+                <h4 class="font-bold text-blue-900 mb-3 text-lg" data-i18n="elderly.vamars.title">How VAMARS Addresses Elderly Care Needs</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-600 font-bold mt-1">✓</span>
+                        <span class="text-sm text-gray-700" data-i18n="elderly.vamars.point1">
+                            <strong>Extended Treatment Capacity:</strong> Solo practitioners can serve more elderly patients per day by eliminating the need for human assistant scheduling coordination.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-600 font-bold mt-1">✓</span>
+                        <span class="text-sm text-gray-700" data-i18n="elderly.vamars.point2">
+                            <strong>Gentle, Consistent Assistance:</strong> Force-limited retraction prevents tissue trauma in fragile oral mucosa common among elderly patients with thinning tissues.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-600 font-bold mt-1">✓</span>
+                        <span class="text-sm text-gray-700" data-i18n="elderly.vamars.point3">
+                            <strong>Longer Procedure Tolerance:</strong> Efficient suction and retraction reduce procedure duration, critical for patients with limited endurance and positioning difficulties.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-600 font-bold mt-1">✓</span>
+                        <span class="text-sm text-gray-700" data-i18n="elderly.vamars.point4">
+                            <strong>Rural Accessibility:</strong> Enables single practitioners in underserved areas to deliver complex procedures without recruiting scarce dental assistant personnel.
+                        </span>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -416,12 +509,54 @@
             en: {
                 'hero.subtitle': 'Voice-Activated Multi-Arm Robotic System',
                 'hero.tagline': 'Automating the Art of Dental Assistance',
-                'hero.description': 'A research proposal to develop an independent robotic assistant capable of light curing, suction, and retraction—enabling true "four-handed dentistry" for the solo practitioner.'
+                'hero.description': 'A research proposal to develop an independent robotic assistant capable of light curing, suction, and retraction—enabling true "four-handed dentistry" for the solo practitioner.',
+                'mission.title': 'Mission Statement',
+                'mission.description': 'VAMARS aims to resolve the fundamental human resource bottleneck in dentistry by providing an intelligent, autonomous robotic assistant that works tirelessly alongside solo practitioners—ensuring that aging populations and underserved communities receive the oral healthcare they deserve.',
+                'elderly.title': 'The Elderly Oral Healthcare Crisis',
+                'elderly.subtitle': 'Aging populations face unique dental challenges that require innovative solutions',
+                'korea.header': 'South Korea: A Case Study in Demographic Transition',
+                'korea.stat1': 'Population aged 65+ by 2067',
+                'korea.stat1.detail': 'Korea has the fastest aging rate among OECD nations',
+                'korea.stat2': 'Currently aged 65+ (2024)',
+                'korea.stat2.detail': 'Already a super-aged society (over 20%)',
+                'korea.description': 'South Korea\'s National Health Insurance data shows that elderly patients (65+) require dental visits 2.3 times more frequently than younger adults. With the collapse of traditional multi-generational household structures, elderly individuals increasingly live alone, making transportation to dental clinics a significant barrier. Rural areas face particularly acute shortages, with some counties having fewer than 5 dentists per 100,000 elderly residents.',
+                'elderly.challenge1.title': 'Bone Density Loss',
+                'elderly.challenge1.desc': 'Osteoporosis and reduced bone density complicate implant procedures and prosthetic stability, requiring more frequent adjustments and specialized care protocols.',
+                'elderly.challenge2.title': 'Polypharmacy Effects',
+                'elderly.challenge2.desc': 'Multiple medications cause xerostomia (dry mouth), increasing cavity risk by 300%. Anticoagulants complicate surgical procedures and emergency interventions.',
+                'elderly.challenge3.title': 'Mobility Limitations',
+                'elderly.challenge3.desc': 'Stroke survivors, Parkinson\'s patients, and those with arthritis struggle with manual dexterity for oral hygiene and transportation to dental facilities.',
+                'elderly.vamars.title': 'How VAMARS Addresses Elderly Care Needs',
+                'elderly.vamars.point1': 'Extended Treatment Capacity: Solo practitioners can serve more elderly patients per day by eliminating the need for human assistant scheduling coordination.',
+                'elderly.vamars.point2': 'Gentle, Consistent Assistance: Force-limited retraction prevents tissue trauma in fragile oral mucosa common among elderly patients with thinning tissues.',
+                'elderly.vamars.point3': 'Longer Procedure Tolerance: Efficient suction and retraction reduce procedure duration, critical for patients with limited endurance and positioning difficulties.',
+                'elderly.vamars.point4': 'Rural Accessibility: Enables single practitioners in underserved areas to deliver complex procedures without recruiting scarce dental assistant personnel.'
             },
             ko: {
                 'hero.subtitle': '음성 작동 다중 로봇 팔 시스템',
                 'hero.tagline': '치과 보조의 예술을 자동화하다',
-                'hero.description': '광중합, 석션, 견인이 가능한 독립형 로봇 보조 시스템을 개발하여 단독 개원의를 위한 진정한 "4수 진료"를 가능하게 하는 연구 제안서입니다.'
+                'hero.description': '광중합, 석션, 견인이 가능한 독립형 로봇 보조 시스템을 개발하여 단독 개원의를 위한 진정한 "4수 진료"를 가능하게 하는 연구 제안서입니다.',
+                'mission.title': '미션',
+                'mission.description': 'VAMARS는 지능형 자율 로봇 보조 시스템을 제공하여 치과의 근본적인 인적 자원 병목 현상을 해결하고, 단독 개원의와 함께 지칠 줄 모르고 일하여 고령 인구와 의료 소외 지역이 받아야 할 구강 건강 관리를 제공하는 것을 목표로 합니다.',
+                'elderly.title': '고령자 구강 건강 관리의 위기',
+                'elderly.subtitle': '고령 인구는 혁신적인 해결책이 필요한 독특한 치과적 문제에 직면하고 있습니다',
+                'korea.header': '대한민국: 인구 구조 전환의 사례 연구',
+                'korea.stat1': '2067년까지 65세 이상 인구',
+                'korea.stat1.detail': '한국은 OECD 국가 중 가장 빠른 고령화율을 보임',
+                'korea.stat2': '현재 65세 이상 인구 (2024년)',
+                'korea.stat2.detail': '이미 초고령 사회 (20% 이상)',
+                'korea.description': '대한민국 국민건강보험 데이터에 따르면 고령 환자(65세 이상)는 젊은 성인보다 2.3배 더 자주 치과를 방문해야 합니다. 전통적인 다세대 가구 구조의 붕괴로 고령자들이 점점 더 혼자 살게 되면서 치과 병원으로의 이동이 중요한 장벽이 되고 있습니다. 농촌 지역은 특히 심각한 인력 부족에 직면해 있으며, 일부 군에서는 65세 이상 인구 10만 명당 치과의사가 5명 미만입니다.',
+                'elderly.challenge1.title': '골밀도 감소',
+                'elderly.challenge1.desc': '골다공증과 골밀도 감소는 임플란트 시술과 보철물 안정성을 복잡하게 만들어 더 빈번한 조정과 전문적인 관리 프로토콜이 필요합니다.',
+                'elderly.challenge2.title': '다약제 복용 효과',
+                'elderly.challenge2.desc': '다수의 약물은 구강 건조증을 유발하여 충치 위험을 300% 증가시킵니다. 항응고제는 외과 시술과 응급 개입을 복잡하게 만듭니다.',
+                'elderly.challenge3.title': '이동성 제한',
+                'elderly.challenge3.desc': '뇌졸중 생존자, 파킨슨병 환자, 관절염 환자는 구강 위생을 위한 손 기능과 치과 시설로의 이동에 어려움을 겪습니다.',
+                'elderly.vamars.title': 'VAMARS가 고령자 진료 요구를 해결하는 방법',
+                'elderly.vamars.point1': '치료 역량 확대: 단독 개원의는 인간 보조자의 일정 조정 필요성을 제거하여 하루에 더 많은 고령 환자를 진료할 수 있습니다.',
+                'elderly.vamars.point2': '부드럽고 일관된 보조: 힘 제한 견인은 조직이 얇아진 고령 환자에게 흔한 연약한 구강 점막의 조직 손상을 방지합니다.',
+                'elderly.vamars.point3': '긴 시술 내성: 효율적인 석션과 견인은 시술 시간을 단축하여 제한된 지구력과 자세 유지 어려움이 있는 환자에게 중요합니다.',
+                'elderly.vamars.point4': '농촌 접근성: 의료 소외 지역의 단독 개원의가 부족한 치과 보조 인력을 채용하지 않고도 복잡한 시술을 제공할 수 있게 합니다.'
             }
         };
 
